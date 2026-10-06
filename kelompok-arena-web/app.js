@@ -2,32 +2,38 @@ const members = [
   {
     name: "DANIL",
     asset: "assets/members/danil.png",
-    position: "center 28%",
+    avatarPosition: "52% 22%",
+    cardPosition: "52% 20%",
   },
   {
     name: "Salsabil Diramadhan",
     asset: "assets/members/salsabil.png",
-    position: "center 36%",
+    avatarPosition: "58% 15%",
+    cardPosition: "58% 14%",
   },
   {
     name: "Ahmad Faozi",
     asset: "assets/members/ahmad.png",
-    position: "center 40%",
+    avatarPosition: "52% 16%",
+    cardPosition: "52% 15%",
   },
   {
     name: "Kemal Hidayat",
     asset: "assets/members/kemal.png",
-    position: "center 38%",
+    avatarPosition: "50% 24%",
+    cardPosition: "50% 22%",
   },
   {
     name: "Nathasya Dwinovitha",
     asset: "assets/members/natasya.png",
-    position: "center 34%",
+    avatarPosition: "48% 26%",
+    cardPosition: "48% 24%",
   },
   {
     name: "Pelis Saputri",
     asset: "assets/members/pelis.png",
-    position: "center 36%",
+    avatarPosition: "50% 48%",
+    cardPosition: "50% 46%",
   },
 ];
 
@@ -82,7 +88,7 @@ function render() {
           <img
             src="${member.asset}"
             alt="${member.name}"
-            style="object-position: ${member.position}"
+            style="object-position: ${member.avatarPosition}"
           />
         </span>
         <span class="avatar__name">${firstName(member.name)}</span>
@@ -100,14 +106,14 @@ function render() {
         data-index="${index}"
         tabindex="0"
       >
-        <img
-          class="member-card__photo"
-          src="${member.asset}"
-          alt=""
-          style="object-position: ${member.position}"
-        />
-        <div class="member-card__fade" aria-hidden="true"></div>
         <h3 class="member-card__name">${member.name}</h3>
+        <div class="member-card__media" aria-hidden="true">
+          <img
+            src="${member.asset}"
+            alt=""
+            style="object-position: ${member.cardPosition}"
+          />
+        </div>
       </article>
     `
     )
